@@ -14,8 +14,12 @@ defmodule BowlingKataTest do
     assert BowlingKata.single_frame_score([0, "/"], [[1, 1]]) == 11
   end 
 
-  test "calculate score for multiple strike frames in a row" do 
+  test "calculate score for two strike frames in a row" do 
     assert BowlingKata.single_frame_score(["X", 0], [["X", 0]]) == 20
+  end 
+
+  test "calculate score for three strike frames in a row" do 
+    assert BowlingKata.single_frame_score(["X", 0], [["X", 0], ["X", 0]]) == 30
   end 
 
   test "calculate score for strike frame" do 

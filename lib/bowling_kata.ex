@@ -11,6 +11,8 @@ defmodule BowlingKata do
         0
       first_roll < 10 and second_roll < 10 ->
         first_roll + second_roll
+      first_roll == "X" and List.first(List.first(tail)) == "X" and List.last(List.first(tail)) == "X" ->
+        30
       first_roll == "X" and List.first(List.first(tail)) == "X" ->
         20 + List.last(List.first(tail))
       second_roll == "/" ->
