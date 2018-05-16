@@ -30,13 +30,13 @@ defmodule BowlingKataTest do
     assert BowlingKata.total_score(knocked_pins) == 90
   end
 
-  # test "spare score total" do
-  #   knocked_pins = [[3, 5], [0, "/"], [4, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]
-  #   assert BowlingKata.total_score(knocked_pins) == 22
-  # end
+  test "spare score total" do
+    knocked_pins = [[3, 5], [0, "/"], [4, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]
+    assert BowlingKata.total_score(knocked_pins) == 26
+  end
 
-  # test "strike score total" do
-  #   knocked_pins = [[3, 5], ["X", 0], [4, 2], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]
-  #   assert BowlingKata.total_score(knocked_pins) == 24
-  # end
+  test "strike score total" do
+    knocked_pins = [[3, 5], ["X", 0], [4, 2], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]
+    assert BowlingKata.total_score(knocked_pins) == 30
+  end
 end
