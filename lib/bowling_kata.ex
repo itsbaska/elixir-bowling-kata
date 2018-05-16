@@ -3,7 +3,7 @@ defmodule BowlingKata do
   Documentation for BowlingKata.
   """
 
-  # reduce all the scores if it matches the 
+  # reduce all the scores if it matches the [[frame] | []].
   def score([frame | []]) do
     IO.puts "1-"
     IO.inspect Enum.reduce(frame, 0, fn(x, total_score) -> x + total_score end)
@@ -23,9 +23,11 @@ defmodule BowlingKata do
 
   def score([frame | rest]) do
     IO.puts "4-"
-    IO.puts "-"
-    IO.inspect score(rest)
-    IO.puts "-"
+    IO.puts "  "
+    # score([frame]) ==> 3
+    # rest ==> [[1, 2]]
+    # score(rest) ==> 3
+    IO.puts "  "
     score([frame]) + score(rest)
   end
 
