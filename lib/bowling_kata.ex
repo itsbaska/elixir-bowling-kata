@@ -23,7 +23,7 @@ defmodule BowlingKata do
     score([frame]) + score(next_frames)
   end
 
-  def next_roll([[roll, _] | _]) do
+  def next_roll([[roll | _] | _]) do
     roll
   end
   
